@@ -16,4 +16,4 @@ jobs:
       - name: Test
         run: |
           echo "here"
-          echo "${{ secrets.TEST_VAR }}"
+          echo "${{ env.TEST_VAR }}"
