@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - main
-# env:
-#   ENVIRONMENT: dev
+env:
+  ENVIRONMENT: dev
 
 jobs:
   manage:
@@ -20,5 +20,10 @@ jobs:
       - name: Iterate over environment variable names
         run: |
           for var in $(compgen -e); do
+            echo "$var"
+          done
+      - name: Iterate over environment variable names 2
+        run: |
+          for var in $(compgen -v); do
             echo "$var"
           done
