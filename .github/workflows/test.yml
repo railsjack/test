@@ -16,4 +16,4 @@ jobs:
       - name: Test
         run: |
           echo "here"
-          echo "${{ vars.TEST_VAR }}"
+          echo "${{ secrets.TEST_VAR }}"
