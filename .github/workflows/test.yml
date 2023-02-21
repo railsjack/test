@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  ENVIRONMENT: dev
 
 jobs:
   manage:
@@ -16,4 +16,4 @@ jobs:
       - name: Test
         run: |
           echo "here"
-          echo "${{ secrets.DATABASE_URL }}"
+          echo "${{ secrets.TEST_VAR }}"
