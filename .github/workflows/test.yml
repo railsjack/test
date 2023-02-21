@@ -20,3 +20,8 @@ jobs:
           do
             echo "$key: ${env[$key]}"
           done
+      - name: Iterate over environment variable names
+        run: |
+          for var in $(compgen -e); do
+            echo "$var"
+          done
