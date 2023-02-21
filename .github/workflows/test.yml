@@ -18,4 +18,4 @@ jobs:
           echo "here"
           echo "${{ env.ENV_CONTEXT_VAR }}"
           echo "${{ env.TEST_VAR }}"
-          echo "${{ env }}"
+          echo ${{ env }} | jq
