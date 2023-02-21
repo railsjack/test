@@ -16,6 +16,7 @@ jobs:
       - name: Test
         run: |
           echo "here"
-          echo "${{ env.ENV_CONTEXT_VAR }}"
-          echo "${{ env.TEST_VAR }}"
-          echo "${{ env }}" | jq
+          for key in "${!env[@]}"
+          do
+            echo "$key: ${env[$key]}"
+          done
