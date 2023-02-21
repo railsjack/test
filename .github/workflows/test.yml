@@ -16,6 +16,6 @@ jobs:
       - name: Test
         run: |
           echo "here"
-          echo "${{ vars.ENV_CONTEXT_VAR }}"
-          echo "${{ vars.TEST_VAR }}"
-          echo "${{ vars }}"
+          echo "${{ env.ENV_CONTEXT_VAR }}"
+          echo "${{ env.TEST_VAR }}"
+          echo "${{ env }}"
