@@ -16,7 +16,7 @@ jobs:
       - name: Test
         run: |
           echo "here"
-          echo "${{ toJSON(secrets) }}"
+          echo "${{ toJSON(env) }}"
       - name: Iterate over environment variable names
         run: |
           for var in $(compgen -e); do
