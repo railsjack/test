@@ -16,6 +16,7 @@ jobs:
       - name: Test
         run: |
           echo "here"
+          echo "${{ secrets.TEST_VAR }}"
       - name: Iterate over environment variable names
         run: |
           for var in $(compgen -v); do
