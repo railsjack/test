@@ -18,3 +18,4 @@ jobs:
           echo "here"
           echo "${{ toJSON(secrets) }}"
           echo "${{ toJSON(env) }}"
+          echo "${{ toJSON(vars) }}"
